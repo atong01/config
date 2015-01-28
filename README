@@ -1,0 +1,10 @@
+README
+
+Written By Alex Tong January 28, 2015
+
+This git repository contains Alex Tong's configuration files for remote machines
+
+It currently Includes:
+
+.vimrc
+passwordless ssh rsa key for Alex_Tong's Macbook and setup
