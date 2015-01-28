@@ -8,3 +8,5 @@ It currently Includes:
 
 .vimrc
 passwordless ssh rsa key for Alex_Tong's Macbook and setup
+
+After running ssh_config.sh, send the IP address to Alex_Tong's Macbook, to allow for remote access.
