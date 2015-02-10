@@ -11,5 +11,7 @@ It currently Includes:
 setup.sh
 .vimrc
 passwordless ssh rsa key for Alex_Tong's Macbook and setup
+weka setup and automatic classpath setup @ login for cshell terminal systems
+    (i.e. Tufts CS servers)
 
 After running ssh_config.sh, send the IP address to Alex_Tong's Macbook, to allow for remote access.
