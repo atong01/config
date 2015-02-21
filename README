@@ -1,15 +1,18 @@
 README
 
-Written By Alex Tong January 28, 2015
+Created By Alex Tong January 28, 2015
+Updated By Alex Tong February 21, 2015
 
 This git repository contains Alex Tong's configuration files for remote machines
 
 run setup.sh to configure remote machine
+run raspi-setup.sh to configure a raspberry pi running raspbian operating system
 
 It currently Includes:
 
-setup.sh
-.vimrc
+raspi-setup.sh -- for setup of a raspberry pi
+setup.sh -- for unix based system setup
+.vimrc -- for vim config
 passwordless ssh rsa key for Alex_Tong's Macbook and setup
 weka setup and automatic classpath setup @ login for cshell terminal systems
     (i.e. Tufts CS servers)
