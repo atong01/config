@@ -12,7 +12,6 @@ cp .vimrc ~
 echo "changing bash prompt"
 echo "#bash prompt change by Alex Tong" >> ~/.bashrc
 echo "\"PS1=\h:\w $ \"" >> ~/.bashrc
-
 echo "setup complete"
 
 ###############################################################################

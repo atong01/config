@@ -1,5 +1,5 @@
 colorscheme koehler 
-set colorcolumn=80
+silent! set colorcolumn=80
 set expandtab
 set smarttab
 set shiftwidth=4
