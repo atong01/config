@@ -12,6 +12,7 @@ It currently Includes:
 
 raspi-setup.sh -- for setup of a raspberry pi
 setup.sh -- for unix based system setup
+            Includes prompt setup for either bash or tcsh shells
 .vimrc -- for vim config
 passwordless ssh rsa key for Alex_Tong's Macbook and setup
 weka setup and automatic classpath setup @ login for cshell terminal systems
