@@ -9,19 +9,27 @@ echo "Running ssh-config.sh"
 ./ssh-config.sh
 echo "copying .vimrc"
 cp .vimrc ~
+###############################################################################
 echo "changing prompt"
-if [ $SHELL == /bin/tcsh ]; then
-    echo tcsh
-    echo "#tcsh prompt change by Alex Tong" >> ~/.bashrc
-    echo "\"PS1=\h:\w $ \"" >> ~/.bashrc
-elif [ $SHELL == /bin/bash ]; then
-    echo bash
-    echo "#bash prompt change by Alex Tong" >> ~/.bashrc
-    echo "\"PS1=\h:\w $ \"" >> ~/.bashrc
-else
-    echo shell not found
-fi
-
+printf "Ok to change prompt?"
+read X
+case "$X" in
+    y*|Y*) 
+        if [ $SHELL == /bin/tcsh ]; then
+            echo tcsh
+            echo "#tcsh prompt change by Alex Tong" >> ~/.cshrc
+            echo "set prompt = \'%~ > \'" >> ~/.cshrc
+        elif [ $SHELL == /bin/bash ]; then
+            echo bash
+            echo "#bash prompt change by Alex Tong" >> ~/.bashrc
+            echo "\"PS1=\h:\w $ \"" >> ~/.bashrc
+        else
+            echo shell not found
+        fi
+    ;;
+    *)
+esac
+###############################################################################
 echo "setup complete"
 
 ###############################################################################
