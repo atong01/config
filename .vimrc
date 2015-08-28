@@ -52,6 +52,7 @@ map <leader>k :call Komment()<CR>
 imap jj <esc>
 imap jk <esc>
 imap kk <esc>
+cmap W w
 
 set makeprg=./compile
 
