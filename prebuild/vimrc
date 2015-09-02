@@ -1,0 +1,12 @@
+" Created by surround.io From http://amix.dk/vim/vimrc.html
+" Update if file changed from outside
+set autoread 
+" search like modern browsers
+set incsearch
+" show matching parentheses when you type
+set showmatch
+" and now use soft tabs with expandtab
+set shiftwidth=4 tabstop=4 expandtab
+" from http://vim.wikia.com/wiki/Automatic_word_wrapping
+set textwidth=80 
+
