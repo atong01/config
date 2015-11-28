@@ -1,4 +1,13 @@
-colorscheme koehler 
+
+call plug#begin('~/.vim/plugged')
+
+Plug 'morhetz/gruvbox'
+
+call plug#end()
+
+colorscheme gruvbox
+
+set background=dark
 silent! set colorcolumn=80
 set expandtab
 set smarttab
@@ -60,3 +69,13 @@ set makeprg=./compile
 syntax on
 filetype plugin on
 filetype indent on
+
+" Processing
+"au BufRead,BufNewFile *.pde setf processing
+" 
+" hardcore hax
+":command! P :! processing-java --sketch=$PWD/ --output=temp --run --force
+:command! PP :! processing-java --sketch=$PWD/ --output=temp --force --run
+"autocmd BufNewFile,BufRead *.pde set makeprg=mkdir\ -p\ ./output\ &&\ processing-java\ --sketch=\"`pwd`\"\ --output=\"`pwd`\"/output\ --run\ --force
+nnoremap <Tab> :wa<bar>:make<bar><CR>
+
