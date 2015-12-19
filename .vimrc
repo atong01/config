@@ -1,13 +1,20 @@
 
-call plug#begin('~/.vim/plugged')
+"call plug#begin('~/.vim/plugged')
+"
+"Plug 'morhetz/gruvbox'
+"
+"call plug#end()
+"
 
-Plug 'morhetz/gruvbox'
+execute pathogen#infect()
 
-call plug#end()
+"colorscheme gruvbox
+"
 
-colorscheme gruvbox
-
+syntax enable
 set background=dark
+colorscheme solarized
+
 silent! set colorcolumn=80
 set expandtab
 set smarttab
@@ -77,5 +84,6 @@ filetype indent on
 ":command! P :! processing-java --sketch=$PWD/ --output=temp --run --force
 :command! PP :! processing-java --sketch=$PWD/ --output=temp --force --run
 "autocmd BufNewFile,BufRead *.pde set makeprg=mkdir\ -p\ ./output\ &&\ processing-java\ --sketch=\"`pwd`\"\ --output=\"`pwd`\"/output\ --run\ --force
-nnoremap <Tab> :wa<bar>:make<bar><CR>
+nnoremap <Tab> :w<bar>:make<bar><CR>
+nnoremap ` :w<bar>:!./run %<CR>
 
