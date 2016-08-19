@@ -23,6 +23,9 @@ set tabstop=4
 set ruler
 set cursorline
 
+"paste from clipboard stuff
+set pastetoggle=<F10>
+inoremap <C-v> <F10><C-r>+<F10>
 
 "tabsetup
 let mapleader=","
@@ -69,7 +72,6 @@ map <leader>k :call Komment()<CR>
 imap jj <esc>
 imap jk <esc>
 imap kk <esc>
-cmap W w
 
 set makeprg=./compile
 
@@ -85,5 +87,7 @@ filetype indent on
 :command! PP :! processing-java --sketch=$PWD/ --output=temp --force --run
 "autocmd BufNewFile,BufRead *.pde set makeprg=mkdir\ -p\ ./output\ &&\ processing-java\ --sketch=\"`pwd`\"\ --output=\"`pwd`\"/output\ --run\ --force
 nnoremap <Tab> :w<bar>:make<bar><CR>
-nnoremap ` :w<bar>:!./run %<CR>
+nnoremap ` :w<bar>:!python %<CR>
+
+autocmd FileType python map <buffer> <C-G> :!python % <CR>
 
