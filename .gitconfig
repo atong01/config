@@ -1,0 +1,38 @@
+[user]
+	email = alexanderytong@gmail.com
+	name = Alex Tong
+[color]
+  ui = auto
+
+[push]
+  default = simple
+
+[alias]
+  unstage = reset HEAD --
+###
+  co = checkout
+###
+  br = branch
+###
+  c = commit
+  cm = commit -m
+###
+  st = status
+###
+  ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
+  hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
+  last = log -5 HEAD
+###
+  d = diff
+  df =git difftool -t meld -d
+###
+  rb = rebase
+  rbi = rebase --interactive
+
+###
+
+[alias]
+  recent = !~/misc/recent-branches.sh
+
+[core]
+	editor = vim
